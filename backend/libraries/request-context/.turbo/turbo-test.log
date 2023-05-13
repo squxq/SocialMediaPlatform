@@ -1,0 +1,35 @@
+
+> @practica/request-context@0.1.0 test
+> jest --runInBand
+
+PASS .dist/test/request-id-express-middleware.test.js
+PASS test/request-id-express-middleware.test.ts
+PASS .dist/test/request-context.test.js
+PASS test/request-context.test.ts
+----------------------------------------------|---------|----------|---------|---------|-------------------
+File                                          | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+----------------------------------------------|---------|----------|---------|---------|-------------------
+All files                                     |     100 |      100 |     100 |     100 |                   
+ request-context                              |     100 |      100 |     100 |     100 |                   
+  index.ts                                    |     100 |      100 |     100 |     100 |                   
+ request-context/.dist                        |     100 |      100 |     100 |     100 |                   
+  index.js                                    |     100 |      100 |     100 |     100 |                   
+ request-context/.dist/src                    |     100 |      100 |     100 |     100 |                   
+  context.js                                  |     100 |      100 |     100 |     100 |                   
+ request-context/.dist/src/request-id         |     100 |      100 |     100 |     100 |                   
+  constant.js                                 |     100 |      100 |     100 |     100 |                   
+ request-context/.dist/src/request-id/express |     100 |      100 |     100 |     100 |                   
+  middleware.js                               |     100 |      100 |     100 |     100 |                   
+ request-context/src                          |     100 |      100 |     100 |     100 |                   
+  context.ts                                  |     100 |      100 |     100 |     100 |                   
+ request-context/src/request-id               |     100 |      100 |     100 |     100 |                   
+  constant.ts                                 |     100 |      100 |     100 |     100 |                   
+ request-context/src/request-id/express       |     100 |      100 |     100 |     100 |                   
+  middleware.ts                               |     100 |      100 |     100 |     100 |                   
+----------------------------------------------|---------|----------|---------|---------|-------------------
+
+Test Suites: 4 passed, 4 total
+Tests:       20 passed, 20 total
+Snapshots:   0 total
+Time:        5.787 s
+Ran all test suites.

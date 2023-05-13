@@ -1,0 +1,126 @@
+
+> order-service@0.0.6 test
+> PRETTY_PRINT=true jest --forceExit --verbose=true --runInBand
+
+global-setup: 17.956ms
+[1684003561144] [32mINFO[39m (5979 on DESKTOP-U7I1LQ1): [36mServer is about to listen to port 0[39m
+[1684003561176] [32mINFO[39m (5979 on DESKTOP-U7I1LQ1): [36mOrder API was called to add new Order {
+  userId: 1,
+  productId: 2,
+  countryId: 1,
+  deliveryAddress: '123 Main St, New York, NY 10001',
+  paymentTermsInDays: 30
+}[39m
+[1684003561290] [32mINFO[39m (5979 on DESKTOP-U7I1LQ1): [36mSequelize operation was just executed in 0 ms with sql: Executed (default): INSERT INTO "Order" ("id","deliveryAddress","userId","countryId","paymentTermsInDays","productId","createdAt","updatedAt") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7) RETURNING "id","deliveryAddress","userId","countryId","paymentTermsInDays","productId","createdAt","updatedAt"; "123 Main St, New York, NY 10001", 1, 1, 30, 2, "2023-05-13 18:46:01.267 +00:00", "2023-05-13 18:46:01.267 +00:00"[39m
+[1684003561298] [32mINFO[39m (5979 on DESKTOP-U7I1LQ1): [36mOrder API was called to add new Order {
+  userId: 1,
+  productId: 2,
+  countryId: 1,
+  deliveryAddress: '123 Main St, New York, NY 10001',
+  paymentTermsInDays: 30
+}[39m
+[1684003561303] [32mINFO[39m (5979 on DESKTOP-U7I1LQ1): [36mSequelize operation was just executed in 0 ms with sql: Executed (default): INSERT INTO "Order" ("id","deliveryAddress","userId","countryId","paymentTermsInDays","productId","createdAt","updatedAt") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7) RETURNING "id","deliveryAddress","userId","countryId","paymentTermsInDays","productId","createdAt","updatedAt"; "123 Main St, New York, NY 10001", 1, 1, 30, 2, "2023-05-13 18:46:01.301 +00:00", "2023-05-13 18:46:01.301 +00:00"[39m
+[1684003561304] [32mINFO[39m (5979 on DESKTOP-U7I1LQ1): [36mOrder API was called to get user by id 14[39m
+[1684003561313] [32mINFO[39m (5979 on DESKTOP-U7I1LQ1): [36mSequelize operation was just executed in 1 ms with sql: Executed (default): SELECT "Order"."id", "Order"."deliveryAddress", "Order"."userId", "Order"."countryId", "Order"."paymentTermsInDays", "Order"."productId", "Order"."createdAt", "Order"."updatedAt", "Country"."id" AS "Country.id", "Country"."name" AS "Country.name" FROM "Order" AS "Order" LEFT OUTER JOIN "Country" AS "Country" ON "Order"."countryId" = "Country"."id" WHERE "Order"."id" = 14;[39m
+{"level":50,"time":1684003561319,"pid":5979,"hostname":"DESKTOP-U7I1LQ1","msg":"Validation failed"}
+  console.log
+    In real production code I will really fire metrics { name: 'error', labels: { errorName: 'invalid-order' } }
+
+      at Object.fireMetric (../../libraries/error-handling/.dist/index.js:96:17)
+
+[1684003561317] [32mINFO[39m (5979 on DESKTOP-U7I1LQ1): [36mOrder API was called to add new Order {
+  userId: 1,
+  deliveryAddress: '123 Main St, New York, NY 10001',
+  paymentTermsInDays: 30
+}[39m
+[1684003561347] [32mINFO[39m (5979 on DESKTOP-U7I1LQ1): [36mOrder API was called to add new Order {
+  userId: 7,
+  productId: 1,
+  countryId: 1,
+  deliveryAddress: '123 Main St, New York, NY 10001',
+  paymentTermsInDays: 30
+}[39m
+{"level":50,"time":1684003561350,"pid":5979,"hostname":"DESKTOP-U7I1LQ1","msg":"The user 7 doesnt exist"}
+  console.log
+    In real production code I will really fire metrics { name: 'error', labels: { errorName: 'user-doesnt-exist' } }
+
+      at Object.fireMetric (../../libraries/error-handling/.dist/index.js:96:17)
+
+PASS test/add-order.test.ts (3.147 s)
+  /api
+    POST /orders
+      ✓ When adding a new valid order, Then should get back approval with 200 response (148 ms)
+      ✓ When adding a new valid order, Then should be able to retrieve it (19 ms)
+      ✓ When adding an order without specifying product, stop and return 400 (29 ms)
+      ✓ When the user does not exist, return 404 response (7 ms)
+      ✎ todo When a new order failed, an invalid-order error was handled
+      ✎ todo When a new valid order was added, then order-added metric was fired
+      ✎ todo When the user service is down, then order is still added successfully
+
+[1684003562011] [32mINFO[39m (5979 on DESKTOP-U7I1LQ1): [36mServer is about to listen to port 0[39m
+[1684003562028] [32mINFO[39m (5979 on DESKTOP-U7I1LQ1): [36mOrder API was called to add new Order {
+  userId: 1,
+  productId: 2,
+  countryId: 1,
+  deliveryAddress: '123 Main St, New York, NY 10001',
+  paymentTermsInDays: 30
+}[39m
+[1684003562108] [32mINFO[39m (5979 on DESKTOP-U7I1LQ1): [36mSequelize operation was just executed in 0 ms with sql: Executed (default): INSERT INTO "Order" ("id","deliveryAddress","userId","countryId","paymentTermsInDays","productId","createdAt","updatedAt") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7) RETURNING "id","deliveryAddress","userId","countryId","paymentTermsInDays","productId","createdAt","updatedAt"; "123 Main St, New York, NY 10001", 1, 1, 30, 2, "2023-05-13 18:46:02.087 +00:00", "2023-05-13 18:46:02.087 +00:00"[39m
+[1684003562112] [32mINFO[39m (5979 on DESKTOP-U7I1LQ1): [36mOrder API was called to get user by id 15[39m
+[1684003562119] [32mINFO[39m (5979 on DESKTOP-U7I1LQ1): [36mSequelize operation was just executed in 1 ms with sql: Executed (default): SELECT "Order"."id", "Order"."deliveryAddress", "Order"."userId", "Order"."countryId", "Order"."paymentTermsInDays", "Order"."productId", "Order"."createdAt", "Order"."updatedAt", "Country"."id" AS "Country.id", "Country"."name" AS "Country.name" FROM "Order" AS "Order" LEFT OUTER JOIN "Country" AS "Country" ON "Order"."countryId" = "Country"."id" WHERE "Order"."id" = 15;[39m
+[1684003562123] [32mINFO[39m (5979 on DESKTOP-U7I1LQ1): [36mOrder API was called to get user by id -1[39m
+[1684003562124] [32mINFO[39m (5979 on DESKTOP-U7I1LQ1): [36mSequelize operation was just executed in 0 ms with sql: Executed (default): SELECT "Order"."id", "Order"."deliveryAddress", "Order"."userId", "Order"."countryId", "Order"."paymentTermsInDays", "Order"."productId", "Order"."createdAt", "Order"."updatedAt", "Country"."id" AS "Country.id", "Country"."name" AS "Country.name" FROM "Order" AS "Order" LEFT OUTER JOIN "Country" AS "Country" ON "Order"."countryId" = "Country"."id" WHERE "Order"."id" = -1;[39m
+PASS test/get-order.test.ts (0.754 s)
+  /api
+    GET /order
+      ✓ When asked for an existing order, Then should retrieve it and receive 200 response (108 ms)
+      ✓ When asked for an non-existing order, Then should receive 404 response (3 ms)
+
+[1684003562704] [32mINFO[39m (5979 on DESKTOP-U7I1LQ1): [36mServer is about to listen to port 0[39m
+[1684003562720] [32mINFO[39m (5979 on DESKTOP-U7I1LQ1): [36mOrder API was called to add new Order {
+  userId: 1,
+  productId: 2,
+  countryId: 1,
+  deliveryAddress: '123 Main St, New York, NY 10001',
+  paymentTermsInDays: 30
+}[39m
+[1684003562796] [32mINFO[39m (5979 on DESKTOP-U7I1LQ1): [36mSequelize operation was just executed in 0 ms with sql: Executed (default): INSERT INTO "Order" ("id","deliveryAddress","userId","countryId","paymentTermsInDays","productId","createdAt","updatedAt") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7) RETURNING "id","deliveryAddress","userId","countryId","paymentTermsInDays","productId","createdAt","updatedAt"; "123 Main St, New York, NY 10001", 1, 1, 30, 2, "2023-05-13 18:46:02.774 +00:00", "2023-05-13 18:46:02.774 +00:00"[39m
+[1684003562799] [32mINFO[39m (5979 on DESKTOP-U7I1LQ1): [36mOrder API was called to delete order 16[39m
+[1684003562802] [32mINFO[39m (5979 on DESKTOP-U7I1LQ1): [36mSequelize operation was just executed in 0 ms with sql: Executed (default): DELETE FROM "Order" WHERE "id" = 16[39m
+[1684003562803] [32mINFO[39m (5979 on DESKTOP-U7I1LQ1): [36mOrder API was called to get user by id 16[39m
+[1684003562809] [32mINFO[39m (5979 on DESKTOP-U7I1LQ1): [36mSequelize operation was just executed in 0 ms with sql: Executed (default): SELECT "Order"."id", "Order"."deliveryAddress", "Order"."userId", "Order"."countryId", "Order"."paymentTermsInDays", "Order"."productId", "Order"."createdAt", "Order"."updatedAt", "Country"."id" AS "Country.id", "Country"."name" AS "Country.name" FROM "Order" AS "Order" LEFT OUTER JOIN "Country" AS "Country" ON "Order"."countryId" = "Country"."id" WHERE "Order"."id" = 16;[39m
+PASS test/delete-order.test.ts (0.684 s)
+  /api
+    DELETE /order
+      ✓ When deleting an existing order, Then it should NOT be retrievable (106 ms)
+
+----------------------------------|---------|----------|---------|---------|-------------------
+File                              | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+----------------------------------|---------|----------|---------|---------|-------------------
+All files                         |   94.33 |     87.5 |      84 |   94.33 |                   
+ order-service                    |     100 |      100 |     100 |     100 |                   
+  config.ts                       |     100 |      100 |     100 |     100 |                   
+ order-service/data-access        |   95.12 |      100 |      75 |   95.12 |                   
+  order-repository.ts             |   95.12 |      100 |      75 |   95.12 | 40-41             
+ order-service/data-access/models |     100 |      100 |     100 |     100 |                   
+  country-model.ts                |     100 |      100 |     100 |     100 |                   
+  db-connection.ts                |     100 |      100 |     100 |     100 |                   
+  order-model.ts                  |     100 |      100 |     100 |     100 |                   
+ order-service/domain             |   92.63 |    84.61 |     100 |   92.63 |                   
+  new-order-use-case.ts           |     100 |      100 |     100 |     100 |                   
+  order-schema.ts                 |     100 |      100 |     100 |     100 |                   
+  order-validators.ts             |   74.07 |       75 |     100 |   74.07 | 16-22             
+  payment-terms-service.ts        |     100 |       50 |     100 |     100 | 4                 
+  user-service-client.ts          |     100 |      100 |     100 |     100 |                   
+ order-service/entry-points/api   |   96.45 |    82.35 |     100 |   96.45 |                   
+  routes.ts                       |      96 |    85.71 |     100 |      96 | 38-39             
+  server.ts                       |    96.7 |       80 |     100 |    96.7 | 47,81-82          
+ order-service/test               |   62.79 |      100 |      40 |   62.79 |                   
+  test-helpers.ts                 |   62.79 |      100 |      40 |   62.79 | 5-14,20-22,24-26  
+----------------------------------|---------|----------|---------|---------|-------------------
+Test Suites: 3 passed, 3 total
+Tests:       3 todo, 7 passed, 10 total
+Snapshots:   0 total
+Time:        4.706 s
+Ran all test suites.
+Force exiting Jest: Have you considered using `--detectOpenHandles` to detect async operations that kept running after all tests finished?

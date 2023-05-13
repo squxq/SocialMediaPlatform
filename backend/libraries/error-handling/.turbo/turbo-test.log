@@ -1,0 +1,164 @@
+
+> @practica/error-handling@0.0.3 test
+> jest --runInBand
+
+PASS .dist/test/index.test.js
+  ● Console
+
+    console.log
+      In real production code I will really fire metrics { name: 'error', labels: { errorName: 'Error' } }
+
+      at Object.fireMetric (.dist/index.js:96:17)
+
+    console.log
+      In real production code I will really fire metrics { name: 'error', labels: { errorName: 'Error' } }
+
+      at Object.fireMetric (.dist/index.js:96:17)
+
+    console.log
+      In real production code I will really fire metrics { name: 'error', labels: { errorName: 'invalid-input' } }
+
+      at Object.fireMetric (.dist/index.js:96:17)
+
+    console.log
+      In real production code I will really fire metrics { name: 'error', labels: { errorName: 'general-error' } }
+
+      at Object.fireMetric (.dist/index.js:96:17)
+
+    console.log
+      In real production code I will really fire metrics { name: 'error', labels: { errorName: 'general-error' } }
+
+      at Object.fireMetric (.dist/index.js:96:17)
+
+    console.log
+      In real production code I will really fire metrics { name: 'error', labels: { errorName: 'general-error' } }
+
+      at Object.fireMetric (.dist/index.js:96:17)
+
+    console.log
+      In real production code I will really fire metrics { name: 'error', labels: { errorName: 'general-error' } }
+
+      at Object.fireMetric (.dist/index.js:96:17)
+
+    console.log
+      In real production code I will really fire metrics { name: 'error', labels: { errorName: 'general-error' } }
+
+      at Object.fireMetric (.dist/index.js:96:17)
+
+    console.log
+      In real production code I will really fire metrics { name: 'error', labels: { errorName: 'general-error' } }
+
+      at Object.fireMetric (.dist/index.js:96:17)
+
+    console.log
+      In real production code I will really fire metrics { name: 'error', labels: { errorName: 'general-error' } }
+
+      at Object.fireMetric (.dist/index.js:96:17)
+
+    console.log
+      In real production code I will really fire metrics { name: 'error', labels: { errorName: 'general-error' } }
+
+      at Object.fireMetric (.dist/index.js:96:17)
+
+    console.log
+      In real production code I will really fire metrics { name: 'error', labels: { errorName: 'general-error' } }
+
+      at Object.fireMetric (.dist/index.js:96:17)
+
+    console.log
+      In real production code I will really fire metrics { name: 'error', labels: { errorName: 'general-error' } }
+
+      at Object.fireMetric (.dist/index.js:96:17)
+
+    console.log
+      In real production code I will really fire metrics { name: 'error', labels: { errorName: 'general-error' } }
+
+      at Object.fireMetric (.dist/index.js:96:17)
+
+{"level":50,"time":1684003556393,"pid":5949,"hostname":"DESKTOP-U7I1LQ1","msg":"mocking pre-known error"}
+PASS test/index.test.ts
+{"level":50,"time":1684003560457,"pid":5949,"hostname":"DESKTOP-U7I1LQ1","msg":"mocking pre-known error"}
+  ● Console
+
+    console.log
+      In real production code I will really fire metrics { name: 'error', labels: { errorName: 'Error' } }
+
+      at Object.fireMetric (.dist/index.js:96:17)
+
+    console.log
+      In real production code I will really fire metrics { name: 'error', labels: { errorName: 'Error' } }
+
+      at Object.fireMetric (.dist/index.js:96:17)
+
+    console.log
+      In real production code I will really fire metrics { name: 'error', labels: { errorName: 'invalid-input' } }
+
+      at Object.fireMetric (.dist/index.js:96:17)
+
+    console.log
+      In real production code I will really fire metrics { name: 'error', labels: { errorName: 'general-error' } }
+
+      at Object.fireMetric (.dist/index.js:96:17)
+
+    console.log
+      In real production code I will really fire metrics { name: 'error', labels: { errorName: 'general-error' } }
+
+      at Object.fireMetric (.dist/index.js:96:17)
+
+    console.log
+      In real production code I will really fire metrics { name: 'error', labels: { errorName: 'general-error' } }
+
+      at Object.fireMetric (.dist/index.js:96:17)
+
+    console.log
+      In real production code I will really fire metrics { name: 'error', labels: { errorName: 'general-error' } }
+
+      at Object.fireMetric (.dist/index.js:96:17)
+
+    console.log
+      In real production code I will really fire metrics { name: 'error', labels: { errorName: 'general-error' } }
+
+      at Object.fireMetric (.dist/index.js:96:17)
+
+    console.log
+      In real production code I will really fire metrics { name: 'error', labels: { errorName: 'general-error' } }
+
+      at Object.fireMetric (.dist/index.js:96:17)
+
+    console.log
+      In real production code I will really fire metrics { name: 'error', labels: { errorName: 'general-error' } }
+
+      at Object.fireMetric (.dist/index.js:96:17)
+
+    console.log
+      In real production code I will really fire metrics { name: 'error', labels: { errorName: 'general-error' } }
+
+      at Object.fireMetric (.dist/index.js:96:17)
+
+    console.log
+      In real production code I will really fire metrics { name: 'error', labels: { errorName: 'general-error' } }
+
+      at Object.fireMetric (.dist/index.js:96:17)
+
+    console.log
+      In real production code I will really fire metrics { name: 'error', labels: { errorName: 'general-error' } }
+
+      at Object.fireMetric (.dist/index.js:96:17)
+
+    console.log
+      In real production code I will really fire metrics { name: 'error', labels: { errorName: 'general-error' } }
+
+      at Object.fireMetric (.dist/index.js:96:17)
+
+----------|---------|----------|---------|---------|-------------------------------------------
+File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                         
+----------|---------|----------|---------|---------|-------------------------------------------
+All files |   82.35 |       76 |      80 |   82.35 |                                           
+ index.js |   82.35 |       76 |      80 |   82.35 | 10-11,16,37,40-41,44-45,54-55,58-61,66-69 
+----------|---------|----------|---------|---------|-------------------------------------------
+
+Test Suites: 2 passed, 2 total
+Tests:       28 passed, 28 total
+Snapshots:   0 total
+Time:        4.926 s
+Ran all test suites.

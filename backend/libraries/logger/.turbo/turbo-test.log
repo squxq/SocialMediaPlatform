@@ -1,0 +1,35 @@
+
+> @practica/logger@1.0.0 test
+> jest --forceExit
+
+ts-jest[ts-jest-transformer] (WARN) Got a `.js` file to compile while `allowJs` option is not set to `true` (file: /home/squxq/Desktop/SocialMediaPlatform/backend/libraries/request-context/.dist/index.js). To fix this:
+  - if you want TypeScript to process JS files, set `allowJs` to `true` in your TypeScript config (usually tsconfig.json)
+  - if you do not want TypeScript to process your `.js` files, in your Jest config change the `transform` key which value is `ts-jest` so that it does not match `.js` files anymore
+ts-jest[ts-jest-transformer] (WARN) Got a `.js` file to compile while `allowJs` option is not set to `true` (file: /home/squxq/Desktop/SocialMediaPlatform/backend/libraries/request-context/.dist/src/context.js). To fix this:
+  - if you want TypeScript to process JS files, set `allowJs` to `true` in your TypeScript config (usually tsconfig.json)
+  - if you do not want TypeScript to process your `.js` files, in your Jest config change the `transform` key which value is `ts-jest` so that it does not match `.js` files anymore
+ts-jest[ts-jest-transformer] (WARN) Got a `.js` file to compile while `allowJs` option is not set to `true` (file: /home/squxq/Desktop/SocialMediaPlatform/backend/libraries/request-context/.dist/src/request-id/express/middleware.js). To fix this:
+  - if you want TypeScript to process JS files, set `allowJs` to `true` in your TypeScript config (usually tsconfig.json)
+  - if you do not want TypeScript to process your `.js` files, in your Jest config change the `transform` key which value is `ts-jest` so that it does not match `.js` files anymore
+ts-jest[ts-jest-transformer] (WARN) Got a `.js` file to compile while `allowJs` option is not set to `true` (file: /home/squxq/Desktop/SocialMediaPlatform/backend/libraries/request-context/.dist/src/request-id/constant.js). To fix this:
+  - if you want TypeScript to process JS files, set `allowJs` to `true` in your TypeScript config (usually tsconfig.json)
+  - if you do not want TypeScript to process your `.js` files, in your Jest config change the `transform` key which value is `ts-jest` so that it does not match `.js` files anymore
+PASS test/index.test.ts
+  logger
+    ✓ When no explicit configuration is set, info logs are written (6 ms)
+    ✓ When log level is DEBUG and logger emits INFO statement, then stdout contains the entry (1 ms)
+    ✓ When logger is configured and then re-configured, then the new config applies (1 ms)
+    ✓ When log level is ERROR and logger emits INFO statement, then nothing is written (1 ms)
+    ✓ When configuring for pretty-print, then its written to stdout (2 ms)
+    ✓ it should print the passed metadata (1 ms)
+    context
+      ✓ it should print the current context (2 ms)
+      ✓ it should merge with current context (1 ms)
+      ✓ it should override current context (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       9 passed, 9 total
+Snapshots:   0 total
+Time:        4.302 s
+Ran all test suites.
+Force exiting Jest: Have you considered using `--detectOpenHandles` to detect async operations that kept running after all tests finished?

@@ -1,0 +1,23 @@
+
+> @practica/configuration-provider@0.0.2 test
+> jest
+
+PASS .dist/tests/configuration-provider.test.js
+PASS tests/configuration-provider.test.ts
+------------------------------|---------|----------|---------|---------|-------------------
+File                          | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+------------------------------|---------|----------|---------|---------|-------------------
+All files                     |   97.05 |    79.16 |     100 |   97.05 |                   
+ configuration-provider       |     100 |      100 |     100 |     100 |                   
+  configuration-provider.ts   |     100 |      100 |     100 |     100 |                   
+  index.ts                    |     100 |      100 |     100 |     100 |                   
+ configuration-provider/.dist |   95.12 |    73.68 |     100 |   95.12 |                   
+  configuration-provider.js   |     100 |    88.88 |     100 |     100 | 3                 
+  index.js                    |   88.23 |       60 |     100 |   88.23 | 10-11             
+------------------------------|---------|----------|---------|---------|-------------------
+
+Test Suites: 2 passed, 2 total
+Tests:       14 passed, 14 total
+Snapshots:   0 total
+Time:        4.707 s
+Ran all test suites.
